@@ -97,7 +97,7 @@ fn generate_collider_mesh(co_shape: &ColliderShapeComponent) -> Option<(Mesh, Ve
             let mut mesh =
                 Mesh::new(bevy::render::render_resource::PrimitiveTopology::TriangleList);
             let trimesh = co_shape.as_trimesh().unwrap();
-            mesh.set_attribute(
+            mesh.insert_attribute(
                 Mesh::ATTRIBUTE_POSITION,
                 VertexAttributeValues::from(
                     trimesh
